@@ -1,3 +1,4 @@
+import Layout from "../components/layout/Layout"
 import MeetupList from "\u0016@component/components/meetups/MeetupList"
 
 const DUMMY_MEETUPS = [
