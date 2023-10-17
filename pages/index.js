@@ -27,18 +27,26 @@ const Home = (props) => {
   );
 };
 
-export async function getStaticProps(){
-//the code which we written here never execute on clientSide
-return{
-  props:{
-    //dummy_meetup loaded and prepared in getStaticProps &
-    //  then they set as props for this page component
-    meetups: DUMMY_MEETUPS,
-  }
-};
+export async function getStaticProps() {
+  //the code which we written here never execute on clientSide
+  return {
+    props: {
+      //dummy_meetup loaded and prepared in getStaticProps &
+      //  then they set as props for this page component
+      meetups: DUMMY_MEETUPS,
+    },
+    revalidate: 10,
+  };
 }
-
-
-
+//  export async function getServerSideProps(context) {
+//   const req = context.req;
+//   const res = context.res;
+//   //fetch data from an API
+//   return {
+//     props: {
+//       meetups: DUMMY_MEETUPS,
+//     }
+//   };
+// }
 
 export default Home;
