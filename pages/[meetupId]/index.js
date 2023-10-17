@@ -1,9 +1,17 @@
-import React from 'react'
+import MeetupDetail from "\u0016@component/components/meetups/MeetupDetail";
 
-const meetupId = () => {
+const meetupDetails = (props) => {
   return (
-    <div>meetupId</div>
-  )
-}
+    <>
+      <MeetupDetail
+        image="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Stadtbild_M%C3%BCnchen.jpg/1280px-Stadtbild_M%C3%BCnchen.jpg"
+        alt="first img"
+        title="image"
+        address="london"
+        description="lorem ipsum cheez macroni"
+      />
+    </>
+  );
+};
 
-export default meetupId
+export default meetupDetails;
